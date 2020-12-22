@@ -40,7 +40,7 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = 19;
 }
 // conversion from celsius to fahrenheit
-let dateElement = document.querySelector("h1");
+let dateElement = document.querySelector("h2");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 // calling new date
@@ -63,7 +63,7 @@ searchCity("Santa Barbara");
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
-  let h2 = document.querySelector("h2");
+  let h2 = document.querySelector("h1");
   h2.innerHTML = city;
   let h3 = document.querySelector("#temperature");
   h3.innerHTML = temperature;
