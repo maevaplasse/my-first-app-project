@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Here comes the sun 🌅</title>
+    <title>my Californian Weather App 🌻</title>
     <meta charset="UTF-8" />
     <script
       src="https://kit.fontawesome.com/690bcad10a.js"
@@ -18,61 +18,63 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body style="background-color: #fcf8e8">
     <div class="box">
       <div class="container">
-        <form id="search-form">
-          <input
-            type="search"
-            placeholder="Your current location"
-            autofocus="on"
-            autocomplete="off"
-            id="city-input"
-          />
-          <input type="submit" value="☮︎" />
-          <button id="geolocation">
-            <i class="fas fa-map-marker-alt"></i>
-          </button>
-        </form>
-        <h1 id="city">Santa Cruz</h1>
-        <h2>wed 4:06</h2>
-        <h3 id="forecast">
-          <i class="fas fa-rainbow"></i>
-          <span class="temperature" id="temperature">25</span>
-          <div class="units">
-            <a href="#" id="celsius-link"> C°</a>|<a
-              href="#"
-              id="fahrenheit-link"
-            >
-              F°</a
-            >
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Enter your city"
+                class="form-control"
+                autocomplete="off"
+                id="city-input"
+              />
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-link" id="geolocation">
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
           </div>
+        </form>
+        <h1 id="current-date">Date</h1>
+        <h2 id="city">Santa Barbara</h2>
+        <h3 id="forecast">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="clear"
+            id="icon"
+          />
+          <span class="temperature" id="temperature">25</span>
+          <div class="units">C°|<a href="#" id="fahrenheit-link"> F°</a></div>
         </h3>
-        <ul id="precipitations">
-          <li><i class="fas fa-tint"></i> 35%</li>
-          <li><i class="fas fa-wind"></i> 16km/h</li>
-          <li><i class="fas fa-water"></i> 2.5m</li>
+        <ul>
+          <li id="description">Clear Sky</li>
         </ul>
         <div class="row">
           <div class="col-3">
-            Mon <i class="far fa-sun"></i>
-            <div class="week-temp">23| 72</div>
+            18H <i class="far fa-sun"></i>
+            <div class="week-temp">23C°</div>
           </div>
           <div class="col-3">
-            Tue <i class="far fa-sun"></i>
-            <div class="week-temp">20| 69</div>
+            20H <i class="far fa-sun"></i>
+            <div class="week-temp">20C°</div>
           </div>
           <div class="col-3">
-            Wed <i class="fas fa-cloud"></i>
-            <div class="week-temp">25| 76</div>
+            22H <i class="fas fa-cloud"></i>
+            <div class="week-temp">25C°</div>
           </div>
           <div class="col-3">
-            Thu <i class="far fa-sun"></i>
-            <div class="week-temp">24| 75</div>
+            00H <i class="far fa-sun"></i>
+            <div class="week-temp">24C°</div>
           </div>
         </div>
       </div>
@@ -80,9 +82,9 @@
     <div id="app"></div>
     <footer>
       <a href="https://github.com/maevaplasse/my-first-app-project">
-        Open-source
+        open-source
       </a>
-      coded by Maeva Plasse
+      ・ coded by Maeva
     </footer>
     <script src="src/script.js"></script>
   </body>

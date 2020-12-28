@@ -1,43 +1,43 @@
-form {
-  padding-bottom: 40px;
-  padding-left: 80px;
-}
-h1 {
-  font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+#current-date {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
+  color: #ffff;
 }
-h2 {
-  font-size: 40px;
+#city {
+  font-family: "Monoton", cursive;
+  font-size: 45px;
   color: #ffff;
   text-align: center;
 }
-h3 {
-  font-size: 65px;
+#forecast {
+  font-family: "Monoton", cursive;
   text-align: center;
   padding-top: 40px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  padding-right: 50px;
   color: #ffff;
 }
+#temperature {
+  position: relative;
+  margin: 8px;
+  font-size: 65px;
+}
 
+.units {
+  position: relative;
+  margin-top: -30px;
+  padding-left: 200px;
+  font-size: 15px;
+}
 ul {
-  padding: 0px;
+  position: relative;
+  padding-left: 150px;
   margin: 0;
+  color: #ffff;
 }
 li {
-  display: inline;
-  padding-top: 15px;
-  padding-left: 45px;
-  padding-bottom: 40px;
-  font-size: 20px;
   list-style: none;
-}
-
-footer {
-  display: flex;
-  font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
+  font-family: "Monoton", cursive;
 }
 
 .box {
@@ -50,18 +50,20 @@ footer {
   border: 4px solid #fafcc2;
   border-radius: 10px;
 }
-.container {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: #ffff;
-}
+
 .row {
   display: flex;
+  margin-top: 30px;
   padding-left: 25px;
+  color: #ffff;
 }
 .row i {
   left: 10px;
   color: #f6d6ad;
 }
-.week-temp {
+footer {
+  display: flex;
   font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
 }
