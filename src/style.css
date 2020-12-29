@@ -29,6 +29,14 @@
   padding-left: 200px;
   font-size: 15px;
 }
+.units .active {
+  color: #ffff;
+  cursor: default;
+}
+
+.units .active:hover {
+  text-decoration: none;
+}
 ul {
   position: relative;
   padding-left: 150px;
