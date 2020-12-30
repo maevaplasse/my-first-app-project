@@ -1,4 +1,4 @@
-#current-date {
+#date {
   font-size: 16px;
   font-family: "Courier New", Courier, monospace;
   text-align: center;
@@ -59,16 +59,24 @@ li {
   border-radius: 10px;
 }
 
-.row {
-  display: flex;
-  margin-top: 30px;
-  padding-left: 25px;
+.weather-forecast h4 {
   color: #ffff;
+  font-family: "Monoton", cursive;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
 }
-.row i {
-  left: 10px;
-  color: #f6d6ad;
+
+.weather-forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 48px;
+  width: 48px;
 }
+
 footer {
   display: flex;
   font-size: 15px;
