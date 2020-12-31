@@ -109,10 +109,10 @@ function displayForecast(response) {
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 4; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-2">
+    <div class="col-3">
       <h4>
         ${formatHours(forecast.dt * 1000)}
       </h4>

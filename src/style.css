@@ -19,14 +19,22 @@
 }
 #temperature {
   position: relative;
-  margin: 8px;
   font-size: 65px;
+}
+#icon {
+  position: relative;
+  margin-top: -30px;
+  font-size: 70px;
+}
+
+#geolocation {
+  color: orange;
 }
 
 .units {
   position: relative;
-  margin-top: -30px;
-  padding-left: 200px;
+  margin-top: -40px;
+  padding-left: 230px;
   font-size: 15px;
 }
 .units .active {
@@ -54,9 +62,9 @@ li {
   margin: 200px auto;
   margin-bottom: 50px;
   padding: 50px 1px;
-  background-image: url(https://i.pinimg.com/564x/ec/c9/44/ecc944cd36ae94f71525abb17f52220d.jpg);
-  border: 4px solid #fafcc2;
-  border-radius: 10px;
+  background-image: url(https://i.pinimg.com/564x/44/fd/75/44fd75685df44dcfc6948d40acdfd43c.jpg);
+  border: 3px solid #84a89e;
+  border-radius: 12px;
 }
 
 .weather-forecast h4 {
@@ -67,19 +75,31 @@ li {
   text-align: center;
   height: 15px;
   line-height: 15px;
-  padding-top: 7px;
+  padding-top: 40px;
 }
 
 .weather-forecast img {
   display: block;
-  margin: 0 auto;
-  height: 48px;
+  padding-left: 15px;
+  height: 38px;
   width: 48px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  padding-left: 5px;
+  color: #ffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
 
 footer {
   display: flex;
   font-size: 15px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
