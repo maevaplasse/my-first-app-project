@@ -27,7 +27,6 @@ function formatHours(timestamp) {
 
   return `${hours}:${minutes}`;
 }
-// current full date and time informations
 
 function search(event) {
   event.preventDefault();
@@ -36,7 +35,6 @@ function search(event) {
   cityElement.innerHTML = cityInput.value;
   searchCity(cityInput.value);
 }
-// selected city input searching form
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
@@ -55,25 +53,6 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
-
-let dateElement = document.querySelector("h1");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
-// calling new date
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-// calling new city input
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-// calling fahrenheit conversion
-
 function searchCity(city) {
   let apiKey = "80ff9ab07927e65d043ab3591c9e3c20";
   let units = "metric";
@@ -83,7 +62,6 @@ function searchCity(city) {
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
-searchCity("Santa Barbara");
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
@@ -102,7 +80,6 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-// calling input city forecast
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#hourly");
@@ -143,6 +120,23 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+
 let currentLocationButton = document.querySelector("#geolocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-// calling current location with "allowing"
+
+let celsiusTemperature = null;
+
+let dateElement = document.querySelector("h1");
+let currentTime = new Date();
+dateElement.innerHTML = formatDate(currentTime);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchCity("Santa Barbara");
